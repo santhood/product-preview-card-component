@@ -1,0 +1,100 @@
+---
+import '@fontsource-variable/montserrat'
+import '@fontsource-variable/fraunces'
+
+import ProductCard from '../components/ProductCard.astro'
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon-32x32.png' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <section class='container'>
+        <ProductCard />
+      </section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-body: 'Montserrat Variable', system-ui, sans-serif;
+    --ff-heading: 'Fraunces Variable', system-ui, sans-serif;
+  }
+
+  * {
+    min-width: 0;
+    font: inherit;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    line-height: 1.5;
+  }
+  img,
+  video,
+  svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  button {
+    padding: 0;
+    border: none;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+  }
+  body {
+    min-height: 100dvh;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: var(--ff-body);
+    color: var(--very-dark-blue);
+    background-color: var(--cream);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  .container {
+    min-height: 100dvh;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-height: 667px) {
+    .container {
+      padding-block: 1.6875rem;
+    }
+  }
+</style>
